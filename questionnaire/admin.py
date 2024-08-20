@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Questionnaire
+from .models import Questionnaire, TypeGift
 
 class QuestionnaireAdmin(admin.ModelAdmin):
     list_display = ('name', 'phone_number', 'date_of_birth', 'checked')
@@ -7,3 +7,4 @@ class QuestionnaireAdmin(admin.ModelAdmin):
     search_fields = ('name', 'phone_number', 'address')
 
 admin.site.register(Questionnaire, QuestionnaireAdmin)
+admin.site.register(TypeGift)

@@ -1,6 +1,6 @@
 from rest_framework import generics
-from .models import Questionnaire
-from .serializers import QuestionnaireSerializer
+from .models import Questionnaire, TypeGift
+from .serializers import QuestionnaireSerializer, TypeGiftSerializer
 
 
 class QuestionnaireCreateView(generics.CreateAPIView):
@@ -16,3 +16,13 @@ class QuestionnaireDetailView(generics.RetrieveUpdateAPIView):
     queryset = Questionnaire.objects.all()
     serializer_class = QuestionnaireSerializer
     lookup_field = 'id'
+
+
+
+class TypeGiftListCreateView(generics.ListCreateAPIView):
+    queryset = TypeGift.objects.all()
+    serializer_class = TypeGiftSerializer
+
+class TypeGiftRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = TypeGift.objects.all()
+    serializer_class = TypeGiftSerializer
