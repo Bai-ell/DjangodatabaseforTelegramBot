@@ -22,6 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 from decouple import Config, Csv
 
+
+
+
 config = Config(RepositoryEnv('.env'))
 
 SECRET_KEY = config('SECRET_KEY')
@@ -152,6 +155,8 @@ CACHES = {
 }
 
 # AUTH_USER_MODEL = 'account.CustomUser'
+# settings.py
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [
@@ -201,7 +206,7 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': '/Users/baielmangmail.com/all_python/GetLid/TelegramBots/DastanBekehsevDjango/logs.log'
+            'filename': '/Users/apple/Work/GetLead/OpenSourceWork/DjangodatabaseforTelegramBot/logs.log'
         },
     },
     'loggers': {
