@@ -14,7 +14,7 @@ from pathlib import Path
 from decouple import config, RepositoryEnv
 
 from dj_database_url import parse as db_url
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -34,8 +34,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default=[], cast=Csv())
-
+ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
@@ -66,6 +65,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -97,10 +97,15 @@ WSGI_APPLICATION = 'dastbek.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': config(
-        'DATABASE_URL',
-        cast=db_url
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT'),
+        'PASSWORD': config('DB_PASSWORD')
+
+    }
 }
 
 
@@ -180,7 +185,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
-REDIS_HOST = '127.0.0.1'
+REDIS_HOST = config('REDIS_HOST')
 REDIS_PORT = '6379'
 
 # Celery setting
@@ -206,7 +211,7 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': '/Users/apple/Work/GetLead/OpenSourceWork/DjangodatabaseforTelegramBot/logs.log'
+            'filename': os.path.join(BASE_DIR, 'logs.log')
         },
     },
     'loggers': {
