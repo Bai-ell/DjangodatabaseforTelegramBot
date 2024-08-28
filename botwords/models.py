@@ -14,6 +14,23 @@ class BotWords(models.Model):
         CHOICE = 'Choice', 'choice'
         GOTOMENU = 'GoToMenu', 'gotomenu'
         CHOICEGIFT = 'ChoiceGift', 'choicegift'
+        QUESTIONNAIRE = 'Questionnaire', 'questionnaire'
+        STARTQUESTIONNAIRE  = 'StartQuestionnaire', 'startquestionnaire'
+        CHOICEGIFTQUESTIONNAIRE = 'ChoiceGiftQuestionnaire', 'choicegiftquestionnaire'
+        ANSWERNAME =  'AnswerName', 'answername'
+        ANSWERPHONENUMBER = 'AnswerPhoneNumber', 'answerphonenumber'
+        ANSWERDATEOFBIRTH = 'AnswerDateOfBirth', 'answerdateofbirth'
+        ANSWERADRESS = 'AnswerAdress', 'answeradreass'
+        ENDQUESTIONNAIRE = 'EndQuestionnaire', 'endquestionnaire'
+        GIFT = 'Gift', 'gift'
+        NAME = 'Name', 'name'
+        PHONE = 'Phone', 'phone'
+        BIRTHDATE = 'BirthDate', 'birthdate'
+        ADDRESS = 'Address', 'address'
+        SENDQUESTIONNAIRE = 'SendQuestionnaire', 'sendquestionnaire'
+        
+
+
 
     botwords_ru = models.TextField()
     botwords_kg = models.TextField()
