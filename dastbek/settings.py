@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 from decouple import config, RepositoryEnv
-
 from dj_database_url import parse as db_url
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -142,8 +141,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
-
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media/'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'staticfiles'),
+]
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
