@@ -28,6 +28,7 @@ class BotWords(models.Model):
         BIRTHDATE = 'BirthDate', 'birthdate'
         ADDRESS = 'Address', 'address'
         SENDQUESTIONNAIRE = 'SendQuestionnaire', 'sendquestionnaire'
+        WARNINGWORD = 'WarningWord', 'warningword'
         
 
 
