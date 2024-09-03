@@ -11,6 +11,8 @@ class Buttons(models.Model):
         CHOICEMENU = 'ChoiceMenu', 'ChoiceMenu'
         CHOICELANG = 'ChoiceLang', 'ChoiceLang'
         MENU = 'Menu', 'Menu'
+        YES = 'Yes', 'yes'
+        NO = 'No', 'no'
 
     button_kg = models.CharField(max_length=255)
     button_ru = models.CharField(max_length=255)

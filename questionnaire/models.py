@@ -6,6 +6,7 @@ class Questionnaire(models.Model):
     date_of_birth = models.CharField(max_length=25)
     address = models.TextField()
     type_gift = models.CharField(max_length=255)  # Поле с значением по умолчанию
+    text = models.TextField()
     checked = models.BooleanField(default=False)
 
     def __str__(self):

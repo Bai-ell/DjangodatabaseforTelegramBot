@@ -29,6 +29,11 @@ class BotWords(models.Model):
         ADDRESS = 'Address', 'address'
         SENDQUESTIONNAIRE = 'SendQuestionnaire', 'sendquestionnaire'
         WARNINGWORD = 'WarningWord', 'warningword'
+        DATASEND = 'DataSend', 'datasend'
+        CORRECTNUMBER  = 'CorrectNumber', 'correctnumber'
+        CORRECTDATE = 'CorrectDate', 'correctdate'
+        ADDITIONALREQUEST= 'AdditionalInfoRequest', 'additionalrequest'
+        ADDITONALTEXT = 'AdditionalText', 'additionaltext'
         
 
 
