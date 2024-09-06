@@ -1,12 +1,12 @@
 from rest_framework import serializers
-from .models import Links, Contats
+from .models import Links, Contacts
 
 class LinksSerializer(serializers.ModelSerializer):
     class Meta:
         model = Links
         fields = '__all__'
 
-class ContatsSerializer(serializers.ModelSerializer):
+class ContactsSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Contats
+        model = Contacts
         fields = '__all__'
