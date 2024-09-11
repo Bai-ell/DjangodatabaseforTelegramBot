@@ -14,6 +14,7 @@ class Buttons(models.Model):
         NO = 'No', _('No')
         GOTOMENU = 'GoToMenu', _('GoTuMenu')
         NOAGAIN = 'NoAgain', _('NoAgain')
+        SKIP = 'Skip', _('Skip')
 
     button_kg = models.CharField(max_length=255, verbose_name=_("Kyrgyz Button"))
     button_ru = models.CharField(max_length=255, verbose_name=_("Russian Button"))

@@ -43,6 +43,9 @@ class BotWords(models.Model):
         STREET = 'Street', _('Street')
         HOUSENUMBER = 'HouseNumber', _('HouseNumber')
         APARTMENTNUMBER =  'ApartmentNumber', _('ApartmentNumber')
+        DEFAULTSTREETWORD = 'DefaultStreetWord', _('DefaultStreetWord')
+        IFNOTINFO = 'IfNotInfo', _('IfNotInfo')
+        DEFAULTADDITIONALINFO = 'DefaultAdditionalInfo', _('DefaultAdditionalInfo')
 
 
 

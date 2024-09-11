@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-from decouple import config, RepositoryEnv
+from decouple import RepositoryEnv
 from dj_database_url import parse as db_url
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -150,9 +150,9 @@ MEDIA_ROOT = BASE_DIR / 'media/'
 STATIC_URL = '/static/'
 
 # Укажите правильный путь к статическим файлам
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'),
+# ]
 
 # Укажите другую директорию для сбора статических файлов
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_collected')
