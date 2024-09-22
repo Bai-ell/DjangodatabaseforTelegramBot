@@ -46,7 +46,15 @@ class BotWords(models.Model):
         DEFAULTSTREETWORD = 'DefaultStreetWord', _('DefaultStreetWord')
         IFNOTINFO = 'IfNotInfo', _('IfNotInfo')
         DEFAULTADDITIONALINFO = 'DefaultAdditionalInfo', _('DefaultAdditionalInfo')
-
+        DEFAULTDISTRICT = 'Defaultdistrict', _('Defaultdistrict')
+        DEFAULTRESIDENTAILAREA = 'DefaultResidentailArea', _('DefaultResidentailArea')
+        DEFAULTDISTRICTWORD = 'DefaultDistrictWord', _('DefaultDistrictWord')
+        DEFAULTRESIDENTAILAREAWORD  = 'DefaultResidentailAreaWord', _('DefaultResidentailAreaWord')
+        CHOICERESIDENTAILAREA = 'ChoiceResidentailArea', _('ChoiceResidentailArea')
+        CHOICEMICRODISTRICT = 'ChoiceMicrodistrict', _('ChoiceMicroDistrict')
+        ANSWERRESIDENTAILAREA  = 'AnswerResidentailArea', _('AnswerResidentailArea')
+        ANSWERMICRODISTRICT  = 'AnswerMicrodistrict', _('AnswerMicroDistrict')
+        
 
 
 

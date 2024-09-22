@@ -15,6 +15,8 @@ class Buttons(models.Model):
         GOTOMENU = 'GoToMenu', _('GoTuMenu')
         NOAGAIN = 'NoAgain', _('NoAgain')
         SKIP = 'Skip', _('Skip')
+        RESIDENTAILAREA = 'ResidentailArea', _('ResidentailArea')
+        MICRODISTRICT = 'Microdistrict', _('Microdistrict')
 
     button_kg = models.CharField(max_length=255, verbose_name=_("Kyrgyz Button"))
     button_ru = models.CharField(max_length=255, verbose_name=_("Russian Button"))
